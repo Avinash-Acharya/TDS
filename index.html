@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top-Down Action Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <canvas id="gameCanvas"></canvas>
+      <div id="ui">
+        <div id="healthBarContainer">
+          <div id="healthBar"></div>
+        </div>
+        <p>Health: <span id="healthValue">100</span></p>
+        <div id="staminaBarContainer">
+          <div id="staminaBar"></div>
+        </div>
+        <p>Stamina: <span id="staminaValue">100</span></p>
+        <p>Kills: <span id="enemyKillCount">0</span></p>
+        <p>Deaths: <span id="deathCount">0</span></p>
+        <button id="restartButton" style="display: none">Restart</button>
+      </div>
+      <div id="watcherMessageBox">
+        <p id="watcherMessage"></p>
+      </div>
+      <div id="gameOverScreen" style="display: none">
+        <h2>Game Over</h2>
+        <button id="gameOverRestartButton">Restart</button>
+      </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="dom.js"></script>
+    <script src="state.js"></script>
+    <script src="utils.js"></script>
+    <script src="entities.js"></script>
+    <script src="levelGenerator.js"></script>
+    <script src="collision.js"></script>
+    <script src="uiUpdates.js"></script>
+    <script src="inputHandlers.js"></script>
+    <script src="gameCore.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
